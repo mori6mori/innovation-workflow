@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 altair==5.4.1
 annotated-types==0.7.0
 anyio==4.6.2.post1
@@ -57,3 +58,10 @@ tqdm==4.66.5
 typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.2.3
+=======
+Streamlight
+pdfplumber
+openai
+Pillow
+pytesseract
+>>>>>>> origin/main
