@@ -1,5 +1,5 @@
-streamlit
-PyMuPDF
+Streamlight
+pdfplumber
 openai
 Pillow
 pytesseract
