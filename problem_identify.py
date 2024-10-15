@@ -1,5 +1,5 @@
 import streamlit as st
-import fitz  # PyMuPDF to extract text from PDFs
+import pdfplumber# PyMuPDF to extract text from PDFs
 from openai import OpenAI
 from PIL import Image
 import pytesseract
@@ -7,10 +7,9 @@ import pytesseract
 # Function to extract text from a PDF file
 def extract_text_from_pdf(pdf_file):
     text = ""
-    with fitz.open(stream=pdf_file.read(), filetype="pdf") as doc:
-        for page_num in range(doc.page_count):
-            page = doc.load_page(page_num)
-            text += page.get_text()
+    with pdfplumber.open(pdf_file) as pdf:
+        for page in pdf.pages:
+            text += page.extract_text() or ""
     return text
 
 # Function to identify challenges using GPT
